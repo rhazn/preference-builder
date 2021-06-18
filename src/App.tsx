@@ -22,6 +22,9 @@ function App() {
     setPreference(getInitialPreferenceForSignature(signature));
   }, [signature]);
 
+  const pad = (s: string, n: number): string =>
+    "0".repeat(Math.max(0, n - s.length)) + s;
+
   return (
     <div className="App">
       <header className="App-header">Preference Builder</header>
@@ -66,25 +69,16 @@ function App() {
           ></textarea>
         </div>
         <div className="flex-column">
-          <h2>As Worldlist Binary</h2>
+          <h2>As Binary</h2>
           <textarea
             className="code text-representation"
-            value={new Uint8Array(
-              preference ? preference.toBinary() : new ArrayBuffer(0)
-            ).reduce((prev, curr) => {
-              return (prev += curr.toString(2));
-            }, "")}
-          ></textarea>
-        </div>
-        <div className="flex-column">
-          <h2>As Ranklist Binary</h2>
-          <textarea
-            className="code text-representation"
-            value={new Uint8Array(
-              preference ? preference.toBinaryRanklist() : new ArrayBuffer(0)
-            ).reduce((prev, curr) => {
-              return (prev += curr.toString(2));
-            }, "")}
+            value={Array.from(
+              new Uint8Array(
+                preference ? preference.toBinary() : new ArrayBuffer(0)
+              )
+            )
+              .map((value) => pad(value.toString(2), 8))
+              .join("")}
           ></textarea>
         </div>
       </div>
