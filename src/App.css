@@ -1,12 +1,12 @@
 .App-header {
-  background-color: rgb(57, 57, 153);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: white;
-  font-weight: bold;
+    background-color: rgb(57, 57, 153);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
 }
 
 h1,
@@ -14,41 +14,55 @@ h2,
 h3,
 h4,
 h5 {
-  color: rgb(57, 57, 153);
+    color: rgb(57, 57, 153);
+}
+
+h1 {
+    text-decoration: underline;
+    padding: 1rem;
 }
 
 .flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 2rem;
-  flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    flex-wrap: nowrap;
 }
 
 .flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .text-representation {
-  display: block;
-  min-height: 450px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  word-wrap: break-word;
-  margin: 1rem;
+    display: block;
+    min-height: 450px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    margin: 1rem;
 }
 
 button,
 create-signature::part(button) {
-  background-color: rgb(57, 57, 153); /* Green */
-  border: none;
-  color: white;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
+    background-color: rgb(57, 57, 153);
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+.error {
+    color: red;
+    font-size: smaller;
 }
