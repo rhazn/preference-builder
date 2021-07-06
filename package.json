@@ -4,8 +4,8 @@
     "private": true,
     "homepage": "https://rhazn.github.io/preference-builder",
     "dependencies": {
-        "@rhazn/logic-components-react": "0.4.0",
-        "@rhazn/logic-ts": "0.4.1",
+        "@rhazn/logic-components-react": "0.5.0",
+        "@rhazn/logic-ts": "0.5.0",
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^11.2.7",
         "@testing-library/user-event": "^12.8.3",
